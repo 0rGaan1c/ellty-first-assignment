@@ -24,7 +24,7 @@ const CheckboxItem = ({ id, label, checked, onChange }) => {
   const checkboxStates = {
     checked,
     hovered: isHovered && !checked,
-    pressed: isPressed && !checked,
+    pressed: isPressed,
     checkedHovered: isHovered && checked
   };
 
