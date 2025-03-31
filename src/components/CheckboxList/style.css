@@ -1,0 +1,19 @@
+.checkbox-list {
+  background-color: white;
+  border-radius: 6px;
+  padding: 0 16px;
+}
+
+.checkbox-list__header {
+  padding: 16px 10px 10px;
+  border-bottom: 0.7px solid var(--color-border-default);
+}
+
+.checkbox-list__pages {
+  padding: 10px;
+}
+
+.checkbox-list__footer {
+  padding: 20px 0;
+  border-top: 0.7px solid var(--color-border-default);
+}

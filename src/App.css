@@ -1,0 +1,49 @@
+:root {
+  /* Color Variables */
+  --color-yellow-primary: #ffce22;
+  --color-yellow-hover: #ffd84d;
+  --color-blue-checked: #2469f6;
+  --color-blue-checked-hover: #5087f8;
+  --color-border-default: #cdcdcd;
+  --color-border-hover: #bdbdbd;
+  --color-text-primary: #1f2128;
+
+  /* Size Variables */
+  --font-size-default: 14px;
+
+  /* Effect Variables */
+  --shadow-checkbox-focus: 0 0 0 4px rgba(36, 105, 246, 0.1);
+  --shadow-container: 0px 8px 15px 0px #1414141f, 0px 0px 4px 0px #1414141a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", sans-serif;
+  background-color: white;
+}
+
+button {
+  font: inherit;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app__container {
+  width: 100%;
+  max-width: 370px;
+  min-height: 326px;
+  box-shadow: var(--shadow-container);
+  border-radius: 6px;
+  overflow: hidden;
+}
