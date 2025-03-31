@@ -1,12 +1,17 @@
 import { useState } from "react";
-import CheckmarkHold from "../../assets/checkmark-hold.svg";
-import CheckmarkHover from "../../assets/checkmark-hover.svg";
-import CheckmarkSelected from "../../assets/checkmark-selected.svg";
+import CheckmarkIcon from "../CheckmarkIcon";
 import "./style.css";
 
 const CheckboxItem = ({ id, label, checked, onChange }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
+
+  const getIconState = () => {
+    if (checked) return "selected";
+    if (isPressed) return "hold";
+    if (isHovered) return "hover";
+    return "default";
+  };
 
   const handleInteraction = {
     onMouseEnter: () => setIsHovered(true),
@@ -26,13 +31,6 @@ const CheckboxItem = ({ id, label, checked, onChange }) => {
     hovered: isHovered && !checked,
     pressed: isPressed,
     checkedHovered: isHovered && checked
-  };
-
-  const getCheckboxIcon = () => {
-    if (checked) return CheckmarkSelected;
-    if (isPressed) return CheckmarkHold;
-    if (isHovered) return CheckmarkHover;
-    return null;
   };
 
   return (
@@ -59,14 +57,7 @@ const CheckboxItem = ({ id, label, checked, onChange }) => {
             checked={checked}
             readOnly
           />
-          {getCheckboxIcon() && (
-            <img
-              src={getCheckboxIcon()}
-              alt=""
-              role="presentation"
-              className="checkbox-item__icon"
-            />
-          )}
+          <CheckmarkIcon state={getIconState()} />
         </div>
       </label>
     </div>
