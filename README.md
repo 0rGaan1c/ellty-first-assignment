@@ -6,15 +6,17 @@
 
 ## Folder Structure
 
+```
 src/
 ├── assets/  
- ├── components/
-│ ├── Button/  
- │ ├── CheckboxItem/ # Single checkbox UI
-│ ├── CheckboxList/ # Manages checbox state
-│ └── CheckmarkIcon/  
- ├── App.jsx # Root component
+├── components/
+|   ├── Button/  
+|   ├── CheckboxItem/   # Single checkbox UI
+|   ├── CheckboxList/   # Manages checkbox state
+|   └── CheckmarkIcon/  # SVG checkmark
+├── App.jsx # Root component
 └── main.jsx # Entry point
+```
 
 ## How It Works
 
